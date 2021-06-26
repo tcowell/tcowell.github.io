@@ -4,36 +4,8 @@
 <head>
     <title>Flashcards Assignment</title>
     <meta charset="UTF-8" />
+    <script type="text/javascript" src="index.js"></script>
 </head>
-
-<body>  
-
-<p>Click on the following questions to see their answers.</p>
- 
-<!-- Create a paragraph where we can add some text later using innnerHTML -->
-<p id="demo"></p>
- 
- 
-<!-- Create a button with a callback -->
-<button id="b2" onclick="buttonClicked(event);">Click me</button>
- 
-<!-- Create two more button with a callback that's different from the one above -->
-<button onclick="buttonClicked2(event);">FirstButton</button>
-<button onclick="buttonClicked2(event);">SecondButton</button>
- 
-<label id="lb"></label>
- 
-<script>
-    function buttonClicked(event) {
-       document.getElementById("demo").innerHTML =
-          "You just clicked a button.";
-      document.getElementById("b2").innerHTML = "I've been clicked.";
-    }
- 
-    function buttonClicked2(event) {
-      document.getElementById("lb").innerHTML = event.currentTarget.innerHTML;
-    }
-  </script>
      
 </body>
  
