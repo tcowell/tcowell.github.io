@@ -18,6 +18,7 @@ let i = 0;
 while (i < myFlashcards.length)  {
   console.log(myFlashcards[i].question + ' ' + myFlashcards[i].answer);
   ++i
+  txt += myFlashcards[i].question + '/n';
 };
 
 document.getElementById("demo").innerHTML = txt;
