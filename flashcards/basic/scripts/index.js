@@ -15,6 +15,7 @@ myFlashcards.push(new question('How many pounds are there in a ton?', '2,000'));
 
 // Loop through the array printing out the question and the answer
 let i = 0;
+txt = "";
 while (i < myFlashcards.length)  {
   console.log(myFlashcards[i].question + ' ' + myFlashcards[i].answer);
   ++i
