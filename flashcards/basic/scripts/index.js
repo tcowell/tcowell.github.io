@@ -18,4 +18,6 @@ let i = 0;
 while (i < myFlashcards.length)  {
   console.log(myFlashcards[i].question + ' ' + myFlashcards[i].answer);
   ++i
-}
+};
+
+document.getElementById("demo").innerHTML = txt;
