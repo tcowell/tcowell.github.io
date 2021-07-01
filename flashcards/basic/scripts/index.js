@@ -1,4 +1,3 @@
-
 class question {
   constructor(question, answer) {
     this.question = question;
@@ -14,13 +13,21 @@ myFlashcards.push(new question('How many ounces are there in a pound?', '16'));
 myFlashcards.push(new question('How many pounds are there in a ton?', '2,000'));
 
 // Loop through the array printing out the question and the answer
-let i = 0;
+let count = 0;
 txt = "";
-while (i < myFlashcards.length)  {
-  console.log(myFlashcards[i].question + ': ');
-  let a = myFlashcards[i].answer;
-  document.querySelector('html').onclick = function() {
-    console.log(a + '\n');
+function displayQuestions(i) {
+  if (i === myFlashcards.length) {
+    return;
   }
-  ++i;
-};
+  console.log(myFlashcards[i].question + ': ');
+  document.querySelector('html').onclick = function() {
+    displayAnswer(i);
+  }
+}
+function displayAnswer(i) {
+  console.log(myFlashcards[i].answer + '\n');
+  ++count;
+  displayQuestions(count);
+}
+
+displayQuestions(count);
