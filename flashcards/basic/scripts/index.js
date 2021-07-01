@@ -18,9 +18,10 @@ let i = 0;
 txt = "";
 while (i < myFlashcards.length)  {
   console.log(myFlashcards[i].question + ': ');
-  ++i
   document.querySelector('html').onclick = function() {
     console.log(myFlashcards[i].answer + '\n');
+  }
+  ++i;
 }
 
 };
