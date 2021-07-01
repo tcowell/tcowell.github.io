@@ -14,20 +14,21 @@ myFlashcards.push(new question('How many pounds are there in a ton?', '2,000'));
 
 // Loop through the array printing out the question and the answer
 let count = 0;
-txt = "";
 function displayQuestions(i) {
-  if (i === myFlashcards.length) {
-    return;
-  }
   console.log(myFlashcards[i].question + ': ');
   document.querySelector('html').onclick = function() {
     displayAnswer(i);
   }
 }
 function displayAnswer(i) {
-  console.log(myFlashcards[i].answer + '\n');
-  ++count;
-  displayQuestions(count);
+  if (count === myFlashcards.length) {
+    return;
+  }
+  else {
+    console.log(myFlashcards[i].answer + '\n');
+    ++count;
+    document.querySelector('html').onclick = function() {displayQuestions(count);}
+  }
 }
 
-displayQuestions(count);
+document.querySelector('html').onclick = function() {displayQuestions(count);}
