@@ -17,9 +17,10 @@ myFlashcards.push(new question('How many pounds are there in a ton?', '2,000'));
 let i = 0;
 txt = "";
 while (i < myFlashcards.length)  {
-  console.log(myFlashcards[i].question + ' ' + myFlashcards[i].answer);
+  console.log(myFlashcards[i].question + ': ');
   ++i
-  txt += myFlashcards[i].question + '/n';
-};
+  document.querySelector('html').onclick = function() {
+    console.log(myFlashcards[i].answer + '\n');
+}
 
-document.getElementById("demo").innerHTML = txt;
+};
