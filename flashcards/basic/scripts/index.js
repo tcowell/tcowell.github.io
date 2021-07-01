@@ -4,7 +4,7 @@ class question {
     this.question = question;
     this.answer = answer;
   }
-}
+};
 // Declare a new array
 let myFlashcards = [];
  
@@ -23,6 +23,4 @@ while (i < myFlashcards.length)  {
     console.log(a + '\n');
   }
   ++i;
-}
-
 };
