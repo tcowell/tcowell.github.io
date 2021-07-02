@@ -32,6 +32,8 @@ function displayQuestions(i) {
 }
 
 var img = document.createElement('img');
+img.style.width = '200px';
+img.style.height = '300px';
 
 function displayAnswer(i) {
   document.getElementById("answer").innerHTML = myFlashcards[i].answer;
