@@ -32,7 +32,7 @@ function displayQuestions(i) {
 }
 
 var img = document.createElement('img');
-img.style.width = '200px';
+img.style.width = '300px';
 img.style.height = '300px';
 
 function displayAnswer(i) {
